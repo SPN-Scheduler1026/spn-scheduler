@@ -1,3 +1,10 @@
+## Quickstart:
+
+Start the server using 'node Server.js' in the /src/ folder.
+Then start the React app using 'npm start' in the folder containing /src/, /public/ and /node_modules/.
+
+The server will not work without a database to connect to. Create a database server and change the IP and port in the Server.js file to that of your database server. The database must be set up using the schema script and the routines before it is usable.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

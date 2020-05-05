@@ -265,6 +265,9 @@ class Admin extends Component {
                                                 <div className='header-item'>
                                                     <div>Classification</div>
                                                 </div>
+                                                <div className='header-item'>
+                                                    <div>Name</div>
+                                                </div>
                                             </div>
                                         </div>
                                     }
@@ -312,6 +315,12 @@ class Admin extends Component {
                                             <div id='sticky-header'>
                                                 <div className='header-item'>
                                                     <div>Class ID</div>
+                                                </div>
+                                                <div className='header-item'>
+                                                    <div></div>
+                                                </div>
+                                                <div className='header-item'>
+                                                    <div>Class Detail</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -363,6 +372,9 @@ class Admin extends Component {
                                                 </div>
                                                 <div className='header-item'>
                                                     <div>Classification</div>
+                                                </div>
+                                                <div className='header-item'>
+                                                    <div>Location</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -609,7 +621,7 @@ class RoomDropdown extends Component {
                 wdend: this.state.tempWeekdayEnd,
                 westart: this.state.tempWeekendStart,
                 weend: this.state.tempWeekendEnd,
-                roomClass: this.state.roomClass
+                roomClass: this.state.roomClass,
             }),
         }).then(response => response.text())
             .then(result => {
@@ -1479,6 +1491,7 @@ class UserClassDropdown extends Component {
             classID: this.props.data === null ? null : this.props.data.classID,
             tempClassID: this.props.data === null ? null : this.props.data.classID,
             userClass: this.props.data === null ? null : this.props.data.class_detail,
+            studentName: this.props.data === null ? null : this.props.data.student_name,
             userID: this.props.data === null ? null : this.props.data.userID,
             inactive: this.props.data === null ? null : this.props.data.deleted,
             tempInactive: this.props.data === null ? null : this.props.data.deleted,
@@ -1638,6 +1651,9 @@ class UserClassDropdown extends Component {
                             </div>
                             <div className='event-item'>
                                 {this.state.userClass}
+                            </div>
+                            <div className='event-item'>
+                                {this.state.studentName}
                             </div>
                         </div>
                         {
@@ -1853,6 +1869,11 @@ class ClassDropdown extends Component {
                             <div className='event-item'>
                                 {this.state.classID}
                             </div>
+                            <div className='event-item'>
+                            </div>
+                            <div className='event-item'>
+                                {this.state.classDetail}
+                            </div>
                         </div>
                         {
                             this.state.showDDContent ? (
@@ -1922,6 +1943,7 @@ class RoomClassDropdown extends Component {
             classID: this.props.data === null ? null : this.props.data.classID,
             tempClassID: this.props.data === null ? null : this.props.data.classID,
             roomClass: this.props.data === null ? null : this.props.data.class_detail,
+            roomName: this.props.data === null ? null : this.props.data.room_name,
             roomID: this.props.data === null ? null : this.props.data.roomID,
             inactive: this.props.data === null ? null : this.props.data.deleted,
             tempInactive: this.props.data === null ? null : this.props.data.deleted,
@@ -2084,6 +2106,9 @@ class RoomClassDropdown extends Component {
                             </div>
                             <div className='event-item'>
                                 {this.state.roomClass}
+                            </div>
+                            <div className='event-item'>
+                                {this.state.roomName}
                             </div>
                         </div>
                         {
