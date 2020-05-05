@@ -5,9 +5,9 @@ const bodyParser = require('body-parser');
 const mysql = require('mysql');
 const moment = require('moment');
 const connection = mysql.createConnection({
-    host    : 'roomreserver.cmaqlsxikwgt.us-east-1.rds.amazonaws.com',
-    user    : 'SeniorDesign845',
-    password: 'spnproject2019',     //Need to update to new password
+    host    : 'sakila.chloiuzfkxyi.us-west-2.rds.amazonaws.com',
+    user    : 'root',
+    password: 'Kkk11121',
     database: 'spn-scheduler'
 });
 
